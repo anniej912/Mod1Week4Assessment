@@ -38,20 +38,21 @@ To Edit the README:
     B. `Chair bench = new Chair(24, true);`  
     C. `var bench = new(24, true);`  
     D. `Chair bench = new(24, true);`  
-    
+
+    My Answer: C is invalid because the var doesn't implicitly give the Chair type to 'bench' so the bench could represent "anything" at this point.
     
 2. Imagine you are interviewing for your first job.  The interviewer asks "What can you tell me about OOP?".  Write your response below:
-
+      Object Oriented Programming uses classes to better organize a code and store reusable methods. This makes your code easier to read and reuse not only for you, but other coders as well.
 
 3. What is Automated Testing?
-
+      Automated Testing is a seperate project written along with your main code that tests for expected outcomes of methods built in your main code.
 
 4. What are some benefits of creating tests for our projects?
+      Creating automated tests for our projects allows easy testing as our projects grow. If someone were to add to or change a spefic class in the program later on, you could simply go to the test to make sure it didn't become broken. It becomes more helpful as the project gets larger.
 
-
-5. When you create a test project, you do not immediately have access to the class(es) in the project that you are testing.  What do you need to do in order to have access to those classes?
-
-6. Take a look at the class below.  Write out the **names** of each test you would write to verify that this class is working. You do not need to write the whole test, just what you would **name** the test methods. Ex: `IsCreatedWithTwoArguments()`
+6. When you create a test project, you do not immediately have access to the class(es) in the project that you are testing.  What do you need to do in order to have access to those classes?
+      You need to right click on the file for the test project, place your mouse over the Add option and from there click on Project Reference... A window will pop open with file options. You check the box of the options that contain the class(es) you are running tests on and click 'Ok.' This should now allow you to test methods from those classes.
+7. Take a look at the class below.  Write out the **names** of each test you would write to verify that this class is working. You do not need to write the whole test, just what you would **name** the test methods. Ex: `IsCreatedWithTwoArguments()`
 ```c#
     public class Vehicle
     {
@@ -83,8 +84,11 @@ To Edit the README:
         }
     }
 ```
-
-
+      
+      - Vehichle() = CreatesNewVehicle_WithTwoArguments
+      - Summary() = ReturnsSummaryOfVehicle
+      - Drive() = AddsMilesDriven_ToVehicle
+      - Paint() = UpdatesPaintColorOfVehicle
 
 ## Exercise (8 Points Possible)
 In Visual Studio, clone your forked repository.  
