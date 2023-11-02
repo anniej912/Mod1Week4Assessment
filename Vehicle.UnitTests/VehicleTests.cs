@@ -1,3 +1,5 @@
+using System.Drawing;
+
 namespace Vehicle.UnitTests
 {
     public class VehicleTests
@@ -17,12 +19,27 @@ namespace Vehicle.UnitTests
         public void Summary_ReturnsInfoAboutVehicle()
         {
             Vehicle andysBike = new Vehicle(2, "Blue");
+            andysBike.Summary();
 
-            var expected = "This Blue vehicle has 2 wheels and has driven 0 miles";
+            Assert.Equal($"This Blue vehicle has 2 wheels, and has driven 0 miles.", andysBike.Summary());
+            }
 
+        [Fact]
+        public void UpdatingMilesDriven_ForVehicle()
+        {
+            Vehicle anniesCar = new Vehicle(4, "Grey");
+            anniesCar.Drive();
 
+            Assert.Equal(5, anniesCar.MilesDriven);
         }
 
-        // Add more tests here!
+        [Fact]
+        public void UpdatingPaintColor_ForVehicle()
+        {
+            Vehicle anniesCar = new Vehicle(4, "Grey");
+            anniesCar.Paint("Green");
+
+            Assert.Equal("Green", anniesCar.Color);
+        }
     }
 }
